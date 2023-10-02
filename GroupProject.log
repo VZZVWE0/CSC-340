@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\annaf\source\repos\GroupProject\GroupProject\Source.cpp(59,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\annaf\source\repos\GroupProject\GroupProject\Source.cpp(61,51): warning C4018: '<': signed/unsigned mismatch
+C:\Users\annaf\source\repos\GroupProject\GroupProject\Source.cpp(74,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\annaf\source\repos\GroupProject\GroupProject\Source.cpp(76,51): warning C4018: '<': signed/unsigned mismatch
+  GroupProject.vcxproj -> C:\Users\annaf\source\repos\GroupProject\Debug\GroupProject.exe

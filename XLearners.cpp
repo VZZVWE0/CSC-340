@@ -18,8 +18,59 @@ void shuffle(std::vector<T>& v) { //Shuffle to implement the random permutation 
     std::shuffle(v.begin(), v.end(), gen);
 }
 
-int main() {
+template <typename T>
+bool vectorsEqual(const std::vector<T>& v1, const std::vector<T>& v2) {     // Unit test function
+    return v1.size() == v2.size() && std::equal(v1.begin(), v1.end(), v2.begin());
+}
 
+
+int main() {
+    
+    //-----------------------TESTING SHUFFLE FUNCTION-----------------------------------------------------------
+    
+    //TEST 1
+    std::vector<int> test1 = { 1, 2, 3, 4, 5 };
+    std::vector<int> test1_shuffle = test1; // Makes a copy to compare to
+
+    std::cout << "TESTING CASE 1..." << std::endl;
+    shuffle(test1_shuffle);
+    if (!vectorsEqual(test1_shuffle, test1)) { // If vectors are equal to each other, then the it did not randomize properly
+        std::cout << "PASSED" << std::endl;    // If vectors do not equal each other, randomizing is successful
+    }
+    else {
+        std::cout << "FAILED" << std::endl;
+    }
+    std::cout << std::endl;
+   
+    // TEST 2
+    std::vector<int> test2 = {6, 7, 8, 9, 10 };
+    std::vector<int> test2_shuffle = test2;
+
+    std::cout << "TESTING CASE 2..." << std::endl;
+    shuffle(test2_shuffle);
+    if (!vectorsEqual(test2_shuffle, test2)) { 
+        std::cout << "PASSED" << std::endl;              
+    }
+    else {
+        std::cout << "FAILED" << std::endl;
+    }
+    std::cout << std::endl;
+  
+    // TEST 3
+    std::vector<int> test3 = { 99, 88,77,66, 55 };
+    std::vector<int> test3_shuffle = test3;
+
+    std::cout << "TESTING CASE 3..." << std::endl;
+    shuffle(test3_shuffle);
+    if (!vectorsEqual(test3_shuffle, test3)) {
+        std::cout << "PASSED" << std::endl;              
+    }
+    else {
+        std::cout << "FAILED" << std::endl;
+    }
+    std::cout << std::endl;
+
+    //-----------------------------END OF TEST-------------------------------------------------------------
     
     int studentSec1, studentSec2; // Initialize studentSec1, studentSec2
     std::cout << "Number of students in Section 1 not yet in a group: ";
